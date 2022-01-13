@@ -1,7 +1,5 @@
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Pokemon from "../views/Pokemon";
-import TermsAndConditions from "../views/TermsAndConditions";
-import Home from "../views/Home";
+import {HomePage, PokemonPage, TermsAndConditionsPage} from "../pages";
 
 
 const Router = () => {
@@ -9,13 +7,13 @@ const Router = () => {
         <BrowserRouter>
             <Switch>
                 <Route path="/pokemon/:name">
-                    <Pokemon />
+                    <PokemonPage />
                 </Route>
                 <Route path="/terms-conditions">
-                    <TermsAndConditions />
+                    <TermsAndConditionsPage />
                 </Route>
                 <Route path="/">
-                    <Home />
+                    <HomePage />
                 </Route>
             </Switch>
             <footer>

@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 
-const TermsAndConditions = () => {
+export const TermsAndConditionsPage = () => {
     return (
         <div>
             <Typography component="h1">Terms & Conditions</Typography>
@@ -24,5 +24,3 @@ const TermsAndConditions = () => {
         </div>
     );
 };
-
-export default TermsAndConditions;

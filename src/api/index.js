@@ -1,0 +1,1 @@
+export {pokemonAPI} from "./pokemonAPI";
