@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-export const PokemonCard = ({pokemon, index}) => {
+export const PokemonItem = ({pokemon, index}) => {
     const {cardMedia, cardContent, cardWrapper, titleCard} = useStyles();
 
     const history = useHistory();

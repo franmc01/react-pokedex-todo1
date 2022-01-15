@@ -1,0 +1,31 @@
+.card-pokemon-detail {
+    height: auto;
+    padding: 1rem;
+    margin: 2.5rem auto 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pokemon-img {
+    height: 21rem;
+    width: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.pokemon-img img {
+    width: 12rem;
+}
+
+.pokemon-info {
+    width: 70%;
+}
+
+div.MuiBox-root.MuiBox-root-14 {
+    padding: 2rem 4rem;
+}
+
+.ability {
+    margin: 0 5px;
+    font-weight: 400;
+}

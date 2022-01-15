@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#000",
     },
 }));
-const Header = () => {
+export const Header = () => {
     const {logo, menuButton, optionMenu, textMobile} = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -80,4 +80,3 @@ const Header = () => {
     );
 };
 
-export default Header;

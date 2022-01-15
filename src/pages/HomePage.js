@@ -1,8 +1,6 @@
 import {useAxiosFetch} from "../hooks";
-import {Loading, PokemonList} from "../components";
+import {Footer, Header, Loading, PokemonList} from "../components";
 import Container from "@material-ui/core/Container";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 
 export const HomePage = () => {
     const {data, loading} = useAxiosFetch({

@@ -1,7 +1,6 @@
 import {makeStyles, Typography} from "@material-ui/core";
-import Header from "../components/Header/Header";
 import Container from "@material-ui/core/Container";
-import Footer from "../components/Footer/Footer";
+import {Footer, Header} from "../components";
 
 const useStyles = makeStyles(() => ({
     typographyContainer: {

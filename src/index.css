@@ -12,6 +12,7 @@ body {
     position: relative;
     padding-bottom: 5em;
     min-height: 100vh;
+    background-color: #E7EBF0;
 }
 
 body::-webkit-scrollbar {

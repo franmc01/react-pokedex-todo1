@@ -1,5 +1,5 @@
 import {Grid, makeStyles} from "@material-ui/core";
-import {PokemonCard} from "./PokemonCard";
+import {PokemonItem} from "./PokemonItem";
 
 const useStyles = makeStyles(() => ({
     pokedexContainer: {
@@ -12,7 +12,7 @@ export const PokemonList = ({pokemones}) => {
         <Grid container spacing={2} className={`animate__animated animate__fadeIn ${pokedexContainer}`}>
             {
                 pokemones.map((pokemon, index) => (
-                    <PokemonCard
+                    <PokemonItem
                         key={pokemon.name}
                         pokemon={pokemon}
                         index={index + 1}

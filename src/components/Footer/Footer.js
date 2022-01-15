@@ -1,7 +1,7 @@
 import {NavLink} from "react-router-dom";
 import './footer.css'
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <footer className={"footer"}>
             <a
@@ -16,4 +16,3 @@ const Footer = () => {
     );
 };
 
-export default Footer;

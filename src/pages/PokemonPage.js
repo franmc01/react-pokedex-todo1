@@ -1,11 +1,8 @@
 import {NavLink, useParams} from "react-router-dom";
-import Header from "../../components/Header/Header";
 import Container from "@material-ui/core/Container";
-import Footer from "../../components/Footer/Footer";
-import {Breadcrumbs, Card, makeStyles, Typography} from "@material-ui/core";
-import {useAxiosFetch} from "../../hooks";
-import {Loading} from "../../components";
-import './pokemon-page.css'
+import {Breadcrumbs, makeStyles, Typography} from "@material-ui/core";
+import {useAxiosFetch} from "../hooks";
+import {Footer, Header, Loading, PokemonDetail} from "../components";
 
 const useStyles = makeStyles(() => ({
     pokemonDetailWrapper: {
@@ -29,11 +26,9 @@ export const PokemonPage = () => {
         url: `https://pokeapi.co/api/v2/pokemon/${name}`
     });
 
-
     if (loading) {
         return <Loading/>;
     }
-
 
     return (
         <>
@@ -48,17 +43,10 @@ export const PokemonPage = () => {
                             {data.name}
                         </Typography>
                     </Breadcrumbs>
-                    <Card style={{height: "auto", padding: "1rem", margin: "2rem auto"}}>
-                                <pre>
-                                    {
-                                        JSON.stringify(data, null, 4)
-                                    }
-                                </pre>
-                    </Card>
+                    <PokemonDetail pokemon={data}/>
                 </div>
             </Container>
             <Footer/>
         </>
-    )
-        ;
+    );
 };
