@@ -1,6 +1,6 @@
 .card-pokemon-detail {
     height: auto;
-    padding: 1rem;
+    padding: .5rem;
     margin: 2.5rem auto 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -26,6 +26,12 @@ div.MuiBox-root.MuiBox-root-14 {
 }
 
 .ability {
+    padding-top: .9rem;
+    padding-bottom: .9rem;
     margin: 0 5px;
     font-weight: 400;
+}
+
+.capitalize{
+    text-transform: capitalize;
 }

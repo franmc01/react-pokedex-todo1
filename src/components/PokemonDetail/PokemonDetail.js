@@ -1,7 +1,8 @@
 import {useState} from "react";
-import {Box, Card, Divider, List, ListItem, ListItemText, Tab, Tabs} from "@material-ui/core";
-import {TabPanel, PokemonType} from "./partial-components";
+import {Box, Card, Tab, Tabs} from "@material-ui/core";
+import {BasicInformation, Moves, Stats, TabPanel} from "./partial-components";
 import './pokemon-detail.css';
+
 
 export const PokemonDetail = ({pokemon}) => {
     console.log(pokemon)
@@ -28,42 +29,14 @@ export const PokemonDetail = ({pokemon}) => {
                         <Tab value={1} wrapped label="Stats"/>
                         <Tab value={2} wrapped label="Moves"/>
                     </Tabs>
-                    <TabPanel value={value} index={0}>
-                        <List component="nav" aria-label="mailbox folders">
-                            <ListItem>
-                                <ListItemText secondary="Type:"/>
-                                {
-                                    pokemon.types.map(item => (<PokemonType key={item.type.name} item={item} />))
-                                }
-                            </ListItem>
-                            <Divider/>
-                            <ListItem divider>
-                                <ListItemText secondary="Height:"/>
-                                <p>
-                                    {`${pokemon.height * 10} cm`}
-                                </p>
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText secondary="Weight:"/>
-                                <p>
-                                    {`${pokemon.weight / 10} kg`}
-                                </p>
-                            </ListItem>
-                            <Divider/>
-                            <ListItem>
-                                <ListItemText secondary="Abilities:"/>
-                                {
-                                    pokemon.abilities.map(item => (<p className={"ability"}
-                                                                      key={item.ability.name}>{item.ability.name}</p>))
-                                }
-                            </ListItem>
-                        </List>
+                    <TabPanel className={"animate__animated animate__fadeIn"} value={value} index={0}>
+                        <BasicInformation pokemon={pokemon}/>
                     </TabPanel>
-                    <TabPanel value={value} index={1}>
-                        Item Two
+                    <TabPanel className={"animate__animated animate__fadeIn"} value={value} index={1}>
+                        <Stats stats={pokemon.stats}/>
                     </TabPanel>
-                    <TabPanel value={value} index={2}>
-                        Item Three
+                    <TabPanel className={"animate__animated animate__fadeIn"} value={value} index={2}>
+                        <Moves moves={pokemon.moves}/>
                     </TabPanel>
                 </Box>
             </div>

@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import {Breadcrumbs, makeStyles, Typography} from "@material-ui/core";
 import {useAxiosFetch} from "../hooks";
 import {Footer, Header, Loading, PokemonDetail} from "../components";
+import {Error404Page} from "./Error404Page";
 
 const useStyles = makeStyles(() => ({
     pokemonDetailWrapper: {
@@ -28,6 +29,10 @@ export const PokemonPage = () => {
 
     if (loading) {
         return <Loading/>;
+    }
+
+    if (!data) {
+        return <Error404Page/>
     }
 
     return (
