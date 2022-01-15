@@ -16,16 +16,6 @@ const Router = () => {
                     <HomePage />
                 </Route>
             </Switch>
-            <footer>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/terms-conditions">Terms & Conditions</Link>
-                    </li>
-                </ul>
-            </footer>
         </BrowserRouter>
     );
 };

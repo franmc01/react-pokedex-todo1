@@ -1,1 +1,0 @@
-export {pokemonAPI} from "./pokemonAPI";

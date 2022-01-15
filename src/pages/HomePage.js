@@ -1,25 +1,29 @@
-import {Link} from "react-router-dom";
-import {Typography} from "@material-ui/core";
-import {usePokemons} from "../hooks";
-import {Loading} from "../components";
+import {useAxiosFetch} from "../hooks";
+import {Loading, PokemonList} from "../components";
+import {AppBar, Toolbar} from "@material-ui/core";
+import Container from "@material-ui/core/Container";
 
 export const HomePage = () => {
-    const {data, loading} = usePokemons();
+    const {data, loading} = useAxiosFetch({
+        url: 'https://pokeapi.co/api/v2/pokemon',
+    });
 
     if (loading) {
         return <Loading/>;
     }
 
     return (
-        <div>
-            <Typography component="h1">POKEDEX</Typography>
-            <ul>
-                {data?.map((pokemon, index) => (
-                    <li key={index}>
-                        <Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+        <>
+            <AppBar position={"absolute"}>
+                <Toolbar>
+                    <img src={"./pokedex-logo.png"} alt="" width={"160rem"} height={"90rem"}/>
+                </Toolbar>
+            </AppBar>
+            <Container>
+                <PokemonList pokemones={data.results}/>
+            </Container>
+
+        </>
+    )
+        ;
 };

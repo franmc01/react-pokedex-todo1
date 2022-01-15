@@ -1,19 +1,17 @@
 import {useEffect, useState} from 'react';
-import {pokemonAPI} from "../api";
+import axios from "axios";
 
-export const usePokemons = () => {
+export const useAxiosFetch = ({url, method = "get", options}) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        pokemonAPI
-            .get('/pokemon')
-            .then((res) => setData(res.data.results))
+        axios[method](url, options)
+            .then((res) => setData(res.data))
             .catch((err) => setError(err))
             .finally(() => setLoading(false));
-    }, []);
-
+    }, [method, url]);
 
     return {data, error, loading};
 };
