@@ -1,7 +1,13 @@
+import {useLocation} from "react-router-dom";
+
 export const Error404Page = () => {
+    let location = useLocation();
+
     return (
         <div>
-            No se encontró el pokemon
+            <h3>
+                No match for <code>{location.pathname}</code>
+            </h3>
         </div>
     );
 };

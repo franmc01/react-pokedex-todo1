@@ -1,0 +1,24 @@
+.inner-part {
+    display: flex;
+    height: 24rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1.4rem;
+}
+.inner-part .img{
+    height: 26rem;
+    width: 26rem;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.content{
+    padding: 2rem;
+}

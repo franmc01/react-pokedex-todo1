@@ -1,19 +1,22 @@
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import {HomePage, PokemonPage, TermsAndConditionsPage} from "../pages";
+import {Error404Page, HomePage, PokemonPage, TermsAndConditionsPage} from "../pages";
 
 
 const Router = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/pokemon/:name">
+                <Route exact path="/">
+                    <HomePage/>
+                </Route>
+                <Route exact path="/pokemon/:name">
                     <PokemonPage/>
                 </Route>
-                <Route path="/terms-conditions">
+                <Route exact path="/terms-conditions">
                     <TermsAndConditionsPage/>
                 </Route>
-                <Route path="/">
-                    <HomePage/>
+                <Route path="*">
+                    <Error404Page/>
                 </Route>
             </Switch>
         </BrowserRouter>

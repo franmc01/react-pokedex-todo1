@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import {useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -44,7 +44,9 @@ const Header = () => {
         <AppBar>
             <Toolbar>
                 <div className={logo}>
-                    <img src={"./pokedex-logo.png"} alt="logo-pokemon" width={"140rem"} height={"70rem"}/>
+                    <Link to="/">
+                        <img src={"../pokedex-logo.png"} alt="logo-pokemon" width={"140rem"} height={"70rem"}/>
+                    </Link>
                 </div>
                 {isMobile ? (
                     <>
@@ -55,21 +57,21 @@ const Header = () => {
                         <Menu id="menu-appbar" anchorEl={anchorEl} keepMounted open={open}
                               onClose={() => setAnchorEl(null)}>
                             <MenuItem>
-                                <Link className={`${optionMenu} ${textMobile}`} to="/">Home</Link>
+                                <NavLink exact className={`${optionMenu} ${textMobile}`} to="/">Home</NavLink>
                             </MenuItem>
                             <MenuItem>
-                                <Link className={`${optionMenu} ${textMobile}`} to="/terms-conditions">Terms &
-                                    Conditions</Link>
+                                <NavLink exact className={`${optionMenu} ${textMobile}`} to="/terms-conditions">Terms &
+                                    Conditions</NavLink>
                             </MenuItem>
                         </Menu>
                     </>
                 ) : (
                     <div style={{marginRight: "1rem"}}>
                         <Button variant="text">
-                            <Link className={optionMenu} to="/">Home</Link>
+                            <NavLink exact className={optionMenu} to="/">Home</NavLink>
                         </Button>
                         <Button variant="text">
-                            <Link className={optionMenu} to="/terms-conditions">Terms & Conditions</Link>
+                            <NavLink exact className={optionMenu} to="/terms-conditions">Terms & Conditions</NavLink>
                         </Button>
                     </div>
                 )}

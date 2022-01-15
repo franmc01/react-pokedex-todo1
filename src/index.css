@@ -22,3 +22,8 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a.active {
+    color: #48bfe3;
+    font-weight: bolder;
+}

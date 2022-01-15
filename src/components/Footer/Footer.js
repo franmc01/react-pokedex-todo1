@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import './footer.css'
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
             >
                 &copy; {new Date().getFullYear()} Francisco Marín
             </a>
-            <Link to="/terms-conditions">Terms & Conditions</Link>
+            <NavLink exact to="/terms-conditions">Terms & Conditions</NavLink>
         </footer>
     );
 };

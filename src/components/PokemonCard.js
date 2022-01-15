@@ -1,4 +1,5 @@
 import {Card, CardActionArea, CardContent, CardMedia, Grid, makeStyles, Typography} from "@material-ui/core";
+import {useHistory} from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
     cardWrapper: {
@@ -24,9 +25,14 @@ const useStyles = makeStyles(() => ({
 
 export const PokemonCard = ({pokemon, index}) => {
     const {cardMedia, cardContent, cardWrapper, titleCard} = useStyles();
+
+    const history = useHistory();
+    const goToPokemonPage = (name) => history.push(`/pokemon/${name}`);
+
+
     return (
         <Grid item xs={6} sm={3} className={cardWrapper}>
-            <Card onClick={() => console.log('Click')}>
+            <Card onClick={() => goToPokemonPage(pokemon.name)}>
                 <CardActionArea>
                     <CardMedia
                         className={cardMedia}
