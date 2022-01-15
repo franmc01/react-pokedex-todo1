@@ -4,11 +4,11 @@
     margin: 2.5rem auto 0 auto;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .pokemon-img {
     height: 21rem;
-    width: 30%;
     display: grid;
     place-items: center;
 }
@@ -32,6 +32,31 @@ div.MuiBox-root.MuiBox-root-14 {
     font-weight: 400;
 }
 
-.capitalize{
+.capitalize {
     text-transform: capitalize;
+}
+
+.button-container {
+    margin: 1.5rem auto 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+    .pokemon-info {
+        width: 90%;
+    }
+
+    div.MuiBox-root {
+        padding: 0;
+    }
+
+
+    div.MuiBox-root.MuiBox-root-14 {
+        padding: 0;
+    }
+
+    .button-container {
+        margin: 1.5rem auto 1rem auto;
+    }
 }

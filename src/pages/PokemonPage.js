@@ -3,7 +3,7 @@ import Container from "@material-ui/core/Container";
 import {Breadcrumbs, makeStyles, Typography} from "@material-ui/core";
 import {useAxiosFetch} from "../hooks";
 import {Footer, Header, Loading, PokemonDetail} from "../components";
-import {Error404Page} from "./Error404Page";
+import {Error404Page} from "./Error404Page/Error404Page";
 
 const useStyles = makeStyles(() => ({
     pokemonDetailWrapper: {
@@ -27,13 +27,8 @@ export const PokemonPage = () => {
         url: `https://pokeapi.co/api/v2/pokemon/${name}`
     });
 
-    if (loading) {
-        return <Loading/>;
-    }
-
-    if (!data) {
-        return <Error404Page/>
-    }
+    if (loading) return <Loading/>;
+    if (!data) return <Error404Page textButtonBack={"Go back"} paragraph={"Pokemon Not Found"}/>;
 
     return (
         <>
