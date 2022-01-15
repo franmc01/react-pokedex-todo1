@@ -1,7 +1,8 @@
 import {useAxiosFetch} from "../hooks";
 import {Loading, PokemonList} from "../components";
-import {AppBar, Toolbar} from "@material-ui/core";
 import Container from "@material-ui/core/Container";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 export const HomePage = () => {
     const {data, loading} = useAxiosFetch({
@@ -14,16 +15,11 @@ export const HomePage = () => {
 
     return (
         <>
-            <AppBar position={"absolute"}>
-                <Toolbar>
-                    <img src={"./pokedex-logo.png"} alt="" width={"160rem"} height={"90rem"}/>
-                </Toolbar>
-            </AppBar>
+            <Header/>
             <Container>
                 <PokemonList pokemones={data.results}/>
             </Container>
-
+            <Footer/>
         </>
-    )
-        ;
+    );
 };

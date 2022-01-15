@@ -1,18 +1,22 @@
 import {Grid, makeStyles} from "@material-ui/core";
 import {PokemonCard} from "./PokemonCard";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     pokedexContainer: {
-        paddingTop: "6rem",
+        paddingTop: "5rem",
     },
 }));
 export const PokemonList = ({pokemones}) => {
-    const classes = useStyles();
+    const {pokedexContainer} = useStyles();
     return (
-        <Grid container spacing={2} className={classes.pokedexContainer}>
+        <Grid container spacing={2} className={`animate__animated animate__fadeIn ${pokedexContainer}`}>
             {
                 pokemones.map((pokemon, index) => (
-                    <PokemonCard key={pokemon.name} pokemon={pokemon} index={index+1}/>
+                    <PokemonCard
+                        key={pokemon.name}
+                        pokemon={pokemon}
+                        index={index + 1}
+                    />
                 ))
             }
         </Grid>

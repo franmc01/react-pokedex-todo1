@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {HomePage, PokemonPage, TermsAndConditionsPage} from "../pages";
 
 
@@ -7,13 +7,13 @@ const Router = () => {
         <BrowserRouter>
             <Switch>
                 <Route path="/pokemon/:name">
-                    <PokemonPage />
+                    <PokemonPage/>
                 </Route>
                 <Route path="/terms-conditions">
-                    <TermsAndConditionsPage />
+                    <TermsAndConditionsPage/>
                 </Route>
                 <Route path="/">
-                    <HomePage />
+                    <HomePage/>
                 </Route>
             </Switch>
         </BrowserRouter>

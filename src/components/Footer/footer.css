@@ -1,0 +1,23 @@
+.footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer a {
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    color: var(--text-hover);
+}
+
