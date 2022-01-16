@@ -36,7 +36,7 @@ export const PokemonDetail = ({pokemon}) => {
                         <Stats stats={pokemon.stats}/>
                     </TabPanel>
                     <TabPanel className={"animate__animated animate__fadeIn"} value={value} index={2}>
-                        <Moves moves={pokemon.moves}/>
+                        <Moves pokemonName={pokemon.name} moves={pokemon.moves}/>
                     </TabPanel>
                 </Box>
             </div>

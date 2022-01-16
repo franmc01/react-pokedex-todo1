@@ -9,7 +9,7 @@ export const Error404Page = ({paragraph, pathURL, textButtonBack}) => {
 
     return (
         <div className="wrapper-error animate__animated animate__fadeIn">
-            <img src="../assets/images/404.png" alt="" width="100%" height="100%"/>
+            <img src="/assets/images/404.png" alt="" width="100%" height="100%"/>
             <div className="wrapper-text">
                 <h1>Uh-oh!</h1>
                 <p>{paragraph}</p>

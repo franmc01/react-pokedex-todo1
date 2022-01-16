@@ -45,7 +45,7 @@ export const Header = () => {
             <Toolbar>
                 <div className={logo}>
                     <Link to="/">
-                        <img src={"../pokedex-logo.png"} alt="logo-pokemon" width={"140rem"} height={"70rem"}/>
+                        <img src={"/pokedex-logo.png"} alt="logo-pokemon" width={"140rem"} height={"70rem"}/>
                     </Link>
                 </div>
                 {isMobile ? (

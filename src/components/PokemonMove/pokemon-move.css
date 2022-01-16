@@ -1,0 +1,17 @@
+.move-detail-wrapper {
+    height: auto;
+    padding: 2rem;
+}
+
+.move-detail-item {
+    padding: .1rem 0;
+}
+
+.move-detail-ite span{
+    font-size: 1.2rem;
+}
+
+.text-bolder-capitalized {
+    text-transform: capitalize;
+    font-weight: bold;
+}
