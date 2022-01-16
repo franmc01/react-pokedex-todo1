@@ -31,7 +31,7 @@ export const PokemonItem = ({pokemon, index}) => {
 
 
     return (
-        <Grid item xs={6} sm={3} className={cardWrapper}>
+        <Grid item xs={6} sm={3} className={`animate__animated animate__fadeIn ${cardWrapper}`}>
             <Card onClick={() => goToPokemonPage(pokemon.name)}>
                 <CardActionArea>
                     <CardMedia

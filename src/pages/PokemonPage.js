@@ -1,9 +1,9 @@
 import {NavLink, useParams} from "react-router-dom";
 import Container from "@material-ui/core/Container";
 import {Breadcrumbs, makeStyles, Typography} from "@material-ui/core";
-import {useAxiosFetch} from "../hooks";
 import {Footer, Header, Loading, PokemonDetail} from "../components";
 import {Error404Page} from "./Error404Page/Error404Page";
+import {usePokemon} from "../hooks";
 
 const useStyles = makeStyles(() => ({
     pokemonDetailWrapper: {
@@ -23,12 +23,10 @@ export const PokemonPage = () => {
     const {pokemonDetailWrapper, breadcrumbLink, breadcrumbCapitalized} = useStyles();
 
     const {name} = useParams();
-    const {data, loading} = useAxiosFetch({
-        url: `https://pokeapi.co/api/v2/pokemon/${name}`
-    });
+    const {pokemon, loading} = usePokemon({name});
 
     if (loading) return <Loading/>;
-    if (!data) return <Error404Page textButtonBack={"Go back"} paragraph={"Pokemon Not Found"}/>;
+    if (!pokemon) return <Error404Page textButtonBack={"Go back"} paragraph={"Pokemon Not Found"}/>;
 
     return (
         <>
@@ -40,10 +38,10 @@ export const PokemonPage = () => {
                             Pokemon
                         </NavLink>
                         <Typography className={breadcrumbCapitalized} color="textPrimary">
-                            {data.name}
+                            {pokemon.name}
                         </Typography>
                     </Breadcrumbs>
-                    <PokemonDetail pokemon={data}/>
+                    <PokemonDetail pokemon={pokemon}/>
                 </div>
             </Container>
             <Footer/>

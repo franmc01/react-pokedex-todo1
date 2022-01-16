@@ -1,1 +1,2 @@
-export {useAxiosFetch} from "./useAxiosFetch";
+export {usePokemon} from "./usePokemon";
+export {usePokemones} from "./usePokemones";
