@@ -2,7 +2,6 @@ import {Card} from "@material-ui/core";
 import './pokemon-move.css';
 
 export const PokemonMove = ({moveDetail}) => {
-    console.log({moveDetail})
     return (<Card style={{margin: "2rem auto"}}>
         <div className="move-detail-wrapper">
             <h2>Effect:</h2>

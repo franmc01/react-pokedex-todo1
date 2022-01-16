@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas al componente del footer Debe de mostrar el componente 1`] = `
+<footer
+  className="footer"
+>
+  <a
+    href="https://github.com/francmarin98"
+    rel="noreferrer"
+    target="_blank"
+  >
+    © 
+    2022
+     Francisco Marín
+  </a>
+  <NavLink
+    exact={true}
+    to="/terms-conditions"
+  >
+    Terms & Conditions
+  </NavLink>
+</footer>
+`;
