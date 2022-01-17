@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {fetchPokemonMoveDetail} from "../services";
+import {fetchPokemonMoveDetail} from "../helpers";
 
 export const usePokemonMove = (moveName) => {
     const [moveDetail, setMoveDetail] = useState(null);
@@ -7,8 +7,8 @@ export const usePokemonMove = (moveName) => {
 
     useEffect(() => {
         setLoading(true);
-        fetchPokemonMoveDetail(moveName).then(res => {
-            setMoveDetail(res.data);
+        fetchPokemonMoveDetail(moveName).then(data => {
+            setMoveDetail(data);
         }).finally(() => setLoading(false));
     }, [moveName])
 

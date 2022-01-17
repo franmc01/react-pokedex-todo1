@@ -1,15 +1,15 @@
 import {useEffect, useState} from "react";
-import {fetchPokemons} from "../services";
+import {fetchPokemonsPaginated} from "../helpers";
 
 const initialPage = 0;
 
-export const usePokemones = ({limit}) => {
+export const usePokemonesPaginated = (limit = 20) => {
     const [pokemones, setPokemones] = useState([]);
     const [page, setPage] = useState(initialPage);
 
     useEffect(() => {
-        fetchPokemons({limit, page}).then((res) => {
-            setPokemones(prevPokemones => prevPokemones.concat(res.data.results));
+        fetchPokemonsPaginated(limit, page).then((data) => {
+            setPokemones(prevPokemones => prevPokemones.concat(data.results));
         });
     }, [page, limit])
 

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas al component <PokemonList/> Debe de mostrarse el componente <PokemonList/> correctamente 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Grid))
+    className="animate__animated animate__fadeIn makeStyles-pokedexContainer-1"
+    container={true}
+    spacing={2}
+  >
+    <PokemonItem
+      index={1}
+      key="bulbasaur"
+      pokemon={
+        Object {
+          "name": "bulbasaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/1/",
+        }
+      }
+    />
+    <PokemonItem
+      index={2}
+      key="charizard"
+      pokemon={
+        Object {
+          "name": "charizard",
+          "url": "https://pokeapi.co/api/v2/pokemon/16/",
+        }
+      }
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <div
+    className="makeStyles-pagination-2"
+  >
+    <WithStyles(ForwardRef(Button))
+      color="primary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      Load more
+    </WithStyles(ForwardRef(Button))>
+  </div>
+</Fragment>
+`;

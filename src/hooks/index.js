@@ -1,2 +1,2 @@
 export {usePokemon} from "./usePokemon";
-export {usePokemones} from "./usePokemones";
+export {usePokemonesPaginated} from "./usePokemonesPaginated";

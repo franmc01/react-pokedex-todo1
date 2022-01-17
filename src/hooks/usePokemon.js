@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {fetchPokemonDetail} from "../services";
+import {fetchPokemonDetail} from "../helpers";
 
 
 export const usePokemon = ({name}) => {
@@ -8,8 +8,8 @@ export const usePokemon = ({name}) => {
 
     useEffect(() => {
         setLoading(true);
-        fetchPokemonDetail(name).then(res => {
-            setPokemon(res.data);
+        fetchPokemonDetail(name).then(data => {
+            setPokemon(data);
         }).finally(() => setLoading(false));
     }, [name])
 

@@ -1,3 +1,3 @@
 export {fetchPokemonMoveDetail} from "./fetchPokemonMoveDetail";
-export {fetchPokemons} from "./fetchPokemons";
+export {fetchPokemonsPaginated} from "./fetchPokemonsPaginated";
 export {fetchPokemonDetail} from "./fetchPokemonDetail";

@@ -1,6 +1,6 @@
 import {pokemonApi} from "../api";
 
 export const fetchPokemonDetail = async (name) => {
-    const apiUrl = `/pokemon/${name}`;
-    return await pokemonApi.get(apiUrl);
+    const {data} = await pokemonApi.get(`/pokemon/${name}`);
+    return data;
 }

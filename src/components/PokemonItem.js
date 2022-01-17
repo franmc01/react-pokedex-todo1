@@ -29,7 +29,6 @@ export const PokemonItem = ({pokemon, index}) => {
     const history = useHistory();
     const goToPokemonPage = (name) => history.push(`/pokemon/${name}`);
 
-
     return (
         <Grid item xs={6} sm={3} className={`animate__animated animate__fadeIn ${cardWrapper}`}>
             <Card onClick={() => goToPokemonPage(pokemon.name)}>

@@ -1,6 +1,6 @@
 import {Button, Grid, makeStyles} from "@material-ui/core";
 import {PokemonItem} from "./PokemonItem";
-import {usePokemones} from "../hooks";
+import {usePokemonesPaginated} from "../hooks";
 
 const useStyles = makeStyles(() => ({
     pokedexContainer: {
@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
 
 export const PokemonList = () => {
     const {pokedexContainer, pagination} = useStyles();
-    const {setPage, pokemones} = usePokemones({limit: 20});
+    const {pokemones, setPage} = usePokemonesPaginated();
 
     const handleClick = () => setPage(prevPage => prevPage + 1);
 
