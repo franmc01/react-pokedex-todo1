@@ -33,9 +33,13 @@ aquí se puede consultar el API https://v5.reactrouter.com/web/guides/quick-star
 6. Implementar página 404 para cualquier página
    inexistente
 7. Implementar los test unitarios que sean
-   covenientes, para lo cual se usa JEST,
+   convenientes, para lo cual se usa JEST,
    testing-library/react, testing-library/hooks,
    axios-mock-adapter
+
+## Demo
+   
+   ![](src/demo/demo.gif)
 
 ## Available Scripts
 
