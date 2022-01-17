@@ -3,7 +3,7 @@ import {Button} from "@material-ui/core";
 import './error-404-page.css';
 import {useHistory} from "react-router-dom";
 
-export const Error404Page = ({paragraph, pathURL, textButtonBack}) => {
+export const Error404Page = ({paragraph, textButtonBack}) => {
 
     const history = useHistory();
 
