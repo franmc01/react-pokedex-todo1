@@ -1,5 +1,6 @@
 import {Card, CardActionArea, CardContent, CardMedia, Grid, makeStyles, Typography} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(() => ({
     cardWrapper: {
@@ -50,3 +51,8 @@ export const PokemonItem = ({pokemon, index}) => {
         </Grid>
     );
 };
+
+PokemonItem.propTypes = {
+    pokemon: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired
+}

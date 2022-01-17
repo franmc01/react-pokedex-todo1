@@ -1,6 +1,7 @@
 import {List, ListItem, ListItemText} from "@material-ui/core";
 import {PokemonType} from "./PokemonType/PokemonType";
 import {PokemonAbility} from "./PokemonAbility/PokemonAbility";
+import PropTypes from "prop-types";
 
 export const BasicInformation = ({pokemon}) => {
     return (
@@ -32,3 +33,7 @@ export const BasicInformation = ({pokemon}) => {
         </List>
     );
 };
+
+BasicInformation.propTypes = {
+    pokemon: PropTypes.object.isRequired
+}

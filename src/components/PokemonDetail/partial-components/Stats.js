@@ -1,5 +1,6 @@
 import {Button, List, ListItem, ListItemText} from "@material-ui/core";
 import {useState} from "react";
+import PropTypes from "prop-types";
 
 export const Stats = ({stats}) => {
     const [itemsToShow, setItemsToShow] = useState(4);
@@ -19,7 +20,7 @@ export const Stats = ({stats}) => {
         <>
             <List component="nav" aria-label="stats">
                 {
-                    stats.slice(0, itemsToShow).map(item => (
+                    stats?.slice(0, itemsToShow).map(item => (
                         <ListItem key={item.stat.name} divider>
                             <ListItemText className={"capitalize"} secondary={`${item.stat.name}:`}/>
                             <p>{`${item.base_stat}`} <small>pts</small></p>
@@ -35,3 +36,7 @@ export const Stats = ({stats}) => {
         </>
     );
 };
+
+Stats.propTypes = {
+    stats: PropTypes.array.isRequired
+}

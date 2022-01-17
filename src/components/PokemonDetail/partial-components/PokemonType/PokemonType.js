@@ -1,4 +1,5 @@
 import './pokemon-type.css'
+import PropTypes from "prop-types";
 
 export const PokemonType = ({item}) => {
     return (
@@ -7,3 +8,6 @@ export const PokemonType = ({item}) => {
         </p>
     );
 };
+PokemonType.propTypes = {
+    item: PropTypes.object.isRequired
+}

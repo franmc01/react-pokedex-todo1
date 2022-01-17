@@ -1,6 +1,7 @@
 import {Button, List, ListItem} from "@material-ui/core";
 import {useState} from "react";
 import {useHistory} from "react-router-dom";
+import PropTypes from "prop-types";
 
 export const Moves = ({pokemonName, moves}) => {
     const [itemsToShow, setItemsToShow] = useState(4);
@@ -26,7 +27,7 @@ export const Moves = ({pokemonName, moves}) => {
             <List component="nav" aria-label="stats">
 
                 {
-                    moves.slice(0, itemsToShow).map(item => (
+                    moves?.slice(0, itemsToShow).map(item => (
                         <ListItem
                             key={item.move.name}
                             button divider
@@ -47,3 +48,8 @@ export const Moves = ({pokemonName, moves}) => {
 
     );
 };
+
+Moves.propTypes = {
+    pokemonName: PropTypes.string.isRequired,
+    moves: PropTypes.array.isRequired
+}

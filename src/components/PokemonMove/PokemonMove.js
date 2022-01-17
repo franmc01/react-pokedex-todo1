@@ -1,5 +1,6 @@
 import {Card} from "@material-ui/core";
 import './pokemon-move.css';
+import PropTypes from "prop-types";
 
 export const PokemonMove = ({moveDetail}) => {
     return (<Card style={{margin: "2rem auto"}}>
@@ -44,3 +45,8 @@ export const PokemonMove = ({moveDetail}) => {
         </div>
     </Card>);
 };
+
+
+PokemonMove.propTypes = {
+    moveDetail: PropTypes.object.isRequired,
+}

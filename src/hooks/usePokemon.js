@@ -4,10 +4,9 @@ import {fetchPokemonDetail} from "../helpers";
 
 export const usePokemon = ({name}) => {
     const [pokemon, setPokemon] = useState();
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setLoading(true);
         fetchPokemonDetail(name).then(data => {
             setPokemon(data);
         }).finally(() => setLoading(false));

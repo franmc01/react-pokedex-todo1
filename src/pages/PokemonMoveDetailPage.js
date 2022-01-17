@@ -2,7 +2,7 @@ import {Footer, Header, Loading, PokemonMove} from "../components";
 import Container from "@material-ui/core/Container";
 import {Breadcrumbs, makeStyles, Typography} from "@material-ui/core";
 import {Link, useParams} from "react-router-dom";
-import {usePokemonMove} from "../hooks/usePokemonMove";
+import {usePokemonMove} from "../hooks";
 import {Error404Page} from "./Error404Page/Error404Page";
 
 const useStyles = makeStyles(() => ({

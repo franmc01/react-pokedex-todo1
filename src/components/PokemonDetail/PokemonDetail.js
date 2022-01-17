@@ -1,11 +1,11 @@
 import {useState} from "react";
 import {Box, Card, Tab, Tabs} from "@material-ui/core";
 import {BasicInformation, Moves, Stats, TabPanel} from "./partial-components";
+import PropTypes from 'prop-types';
 import './pokemon-detail.css';
 
 
 export const PokemonDetail = ({pokemon}) => {
-    console.log(pokemon)
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -43,3 +43,7 @@ export const PokemonDetail = ({pokemon}) => {
         </Card>
     );
 };
+
+PokemonDetail.propTypes = {
+    pokemon: PropTypes.object.isRequired,
+}
